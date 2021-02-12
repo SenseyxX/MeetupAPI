@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ogacki\\source\\repos\\MeetupAPI\\MeetupAPI\\MeetupAPI.csproj": {}
+    "C:\\Users\\ogacki\\source\\Projekty\\MeetupAPI_Home\\MeetupAPI\\MeetupAPI\\MeetupAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ogacki\\source\\repos\\MeetupAPI\\MeetupAPI\\MeetupAPI.csproj": {
+    "C:\\Users\\ogacki\\source\\Projekty\\MeetupAPI_Home\\MeetupAPI\\MeetupAPI\\MeetupAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ogacki\\source\\repos\\MeetupAPI\\MeetupAPI\\MeetupAPI.csproj",
+        "projectUniqueName": "C:\\Users\\ogacki\\source\\Projekty\\MeetupAPI_Home\\MeetupAPI\\MeetupAPI\\MeetupAPI.csproj",
         "projectName": "MeetupAPI",
-        "projectPath": "C:\\Users\\ogacki\\source\\repos\\MeetupAPI\\MeetupAPI\\MeetupAPI.csproj",
+        "projectPath": "C:\\Users\\ogacki\\source\\Projekty\\MeetupAPI_Home\\MeetupAPI\\MeetupAPI\\MeetupAPI.csproj",
         "packagesPath": "C:\\Users\\ogacki\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ogacki\\source\\repos\\MeetupAPI\\MeetupAPI\\obj\\",
+        "outputPath": "C:\\Users\\ogacki\\source\\Projekty\\MeetupAPI_Home\\MeetupAPI\\MeetupAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ogacki\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -37,9 +37,13 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.3, )"
@@ -53,6 +57,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.3, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[4.10.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.0.4, )"
             }
           },
           "imports": [
