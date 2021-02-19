@@ -1,4 +1,6 @@
 using Mag.Entities;
+using Mag.Repositories;
+using Mag.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -33,8 +35,12 @@ namespace Mag
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Mag", Version = "v1" });
             });
-            IServiceCollection serviceCollections = services.AddAutoMapper(this.GetType().Assembly)
-                                .AddDbContext<MagContext>();
+
+            services
+                .AddTransient<IItemService, ItemService>()
+                .AddTransient<IItemRepository, ItemRepository>() 
+                .AddAutoMapper(this.GetType().Assembly)
+                .AddDbContext<MagContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
