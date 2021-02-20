@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -16,8 +17,10 @@ namespace Mag.Entities
                 public string Description { get; set; }
                 public byte[] ItemPhoto { get; set; }
                 public string QrCode { get; set; }
-                public int LoanHistoryId { get; set; }
 
+               
+
+                [ForeignKey("CategoryForeignKey")]
                 public virtual Category Category { get; set; }
                 public virtual Quality Quality { get; set; }
                 public virtual LoanHistory LoansHistories { get; set; }                

@@ -4,14 +4,16 @@ using Mag.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Mag.Migrations
 {
     [DbContext(typeof(MagContext))]
-    partial class MagContextModelSnapshot : ModelSnapshot
+    [Migration("20210220142257_AddRepository")]
+    partial class AddRepository
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
